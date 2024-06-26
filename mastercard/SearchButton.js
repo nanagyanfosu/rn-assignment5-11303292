@@ -8,7 +8,7 @@ const SearchButton = ({ onPress }) => {
     <View style={{flexDirection: 'row', justifyContent: 'flex-end', width: '45%'  }}>
     <TouchableOpacity onPress={onPress} style={{alignSelf: 'flex-end'
     }}>
-        <View style={{padding: 10 ,backgroundColor: 'gray', borderRadius :50, margin:10, }}>
+        <View style={{padding: 10 ,backgroundColor: '#DCDCDC', borderRadius :50, margin:10, }}>
       <Icon name="magnify" size={24} color="black" />
       </View>
     </TouchableOpacity>

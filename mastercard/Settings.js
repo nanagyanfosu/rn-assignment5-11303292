@@ -1,36 +1,18 @@
 import React ,{useState} from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, SafeAreaView, Switch } from 'react-native';
+import { StyleSheet, Text, View, Switch } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { useTheme } from './ThemeContext';
 
-const Settings = () => {
-   const [isDarkTheme, setIsDarkTheme] = useState(false);
-   const toggleTheme = () => setIsDarkTheme(!isDarkTheme);
+
+function Settings(){
+
+   const [isEnabled, setIsEnabled] = useState(false);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+   const {toggleTheme} = useTheme();
    
-   const dynamicStyles = StyleSheet.create({
-      container: {
-         alignContent: 'center',
-    alignItems: 'center',
-    marginTop: 60, 
-    padding: 15,
-        flex: 1,
-        backgroundColor: isDarkTheme ? '#333' : '#fff', 
-      },
-      text: {
-        color: isDarkTheme ? '#fff' : '#000', 
-      },
-      content: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: 20,
-      },
-      theme:{      
-         backgroundColor: isDarkTheme ? '#333' : 'white',}
-
-    });
 
   return (
-<View style={dynamicStyles.container}>
+<View style={styles.container}>
   <Text style={{alignContent: 'center', justifyContent:'center',fontSize: '30', }}>Settings</Text>
 
 <View style={styles.setting}>
@@ -59,9 +41,16 @@ const Settings = () => {
 
 
 <View style={styles.theme}>
-<Text style={{color: isDarkTheme ? 'white' : 'black', fontSize: 25}}>Theme</Text>
-<Switch trackColor={{false: 'blue', true: 'green'}} thumbColor={isDarkTheme? 'yellow':'pink'} onValueChange={toggleTheme} value={isDarkTheme}/>
-</View>
+<Text style={{ fontSize: 25}}>Theme</Text>
+<Switch
+        trackColor={{ false: 'blue', true: 'green' }}
+        thumbColor={isEnabled ? 'white' : 'white'}
+        ios_backgroundColor="gray"
+        onValueChange={toggleSwitch}
+        value={isEnabled}
+      /></View>
+
+      
 
 </View>
 
