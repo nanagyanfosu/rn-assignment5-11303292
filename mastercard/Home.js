@@ -67,15 +67,70 @@ function Home() {
 
   <View style={styles.transactioncontent}>
 
-  <View>
-  <TouchableOpacity style={{padding: 10, backgroundColor: 'grey', borderRadius: 100 }}> 
-<MaterialIcons name='apple' size={24} color='black'/>
-</TouchableOpacity>
-<View style={styles.content}>
-<Text>Apple Store</Text>
-<Text>Entertainment</Text>
+  <View style={{flexDirection: 'row'}}>
+  <View style={{padding: 15, backgroundColor: 'grey', borderRadius:50 }}> 
+<MaterialIcons name='apple' size={26} color='black'/>
 </View>
-</View>  
+<View style={styles.contentRow}>
+<View style={styles.content}>
+<Text style={{fontSize: 20,}}>Apple Store</Text>
+<Text style={{fontSize: 18, fontWeight: 200}}>Entertainment</Text>
+</View>
+<Text>$19,99</Text>
+</View> 
+</View> 
+
+<View style={{flexDirection: 'row'}}>
+  <View style={{padding: 15, backgroundColor: 'grey', borderRadius:50 }}> 
+<MaterialIcons name='apple' size={26} color='black'/>
+</View>
+<View style={styles.contentRow}>
+<View style={styles.content}>
+<Text style={{fontSize: 20}}>Apple Store</Text>
+<Text style={{fontSize: 18, fontWeight: 200}}>Entertainment</Text>
+</View>
+<Text>$19,99</Text>
+</View> 
+</View> 
+
+<View style={{flexDirection: 'row'}}>
+  <View style={{padding: 15, backgroundColor: 'grey', borderRadius:50 }}> 
+<MaterialIcons name='apple' size={26} color='black'/>
+</View>
+<View style={styles.contentRow}>
+<View style={styles.content}>
+<Text style={{fontSize: 20}}>Apple Store</Text>
+<Text style={{fontSize: 18, fontWeight: 200}}>Entertainment</Text>
+</View>
+<Text>$19,99</Text>
+</View> 
+</View> 
+
+<View style={{flexDirection: 'row'}}>
+  <View style={{padding: 15, backgroundColor: 'grey', borderRadius:50 }}> 
+<MaterialIcons name='apple' size={26} color='black'/>
+</View>
+<View style={styles.contentRow}>
+<View style={styles.content}>
+<Text style={{fontSize: 20}}>Apple Store</Text>
+<Text style={{fontSize: 18, fontWeight: 200}}>Entertainment</Text>
+</View>
+<Text>$19,99</Text>
+</View> 
+</View> 
+
+<View style={{flexDirection: 'row'}}>
+  <View style={{padding: 15, backgroundColor: 'grey', borderRadius:50 }}> 
+<MaterialIcons name='apple' size={26} color='black'/>
+</View>
+<View style={styles.contentRow}>
+<View style={styles.content}>
+<Text style={{fontSize: 20}}>Apple Store</Text>
+<Text style={{fontSize: 18, fontWeight: 200}}>Entertainment</Text>
+</View>
+<Text>$19,99</Text>
+</View> 
+</View> 
 
 </View>
 </View>
@@ -89,7 +144,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 10,
     marginTop: 30,
-    backgroundColor: '#fff',
+   
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -124,6 +179,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
    columnGap: 150,
   
+  },
+  transactioncontent:{
+rowGap: 15,
+padding: 10,
+
+  },
+  content:{
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+   
+  },
+  contentRow:{
+    flexDirection: 'row',
+    justifyContent:'space-between',
+    alignItems: 'center',
+    padding: 10,
+   justifyContent: 'center',
+   columnGap: 120,
   }
 });
 
